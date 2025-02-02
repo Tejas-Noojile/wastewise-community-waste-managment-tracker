@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://png.pngtree.com/thumb_back/fh260/background/20240715/pngtree-waste-recycling-eco-symbol-with-garbage-disposal-on-stone-table-background-image_15873001.jpg");
+            color: white;
+            padding: 20px;
+            text-align: center;
+            animation: headerAnimation 1s ease-in-out;
+        }
+
+        @keyframes headerAnimation {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #26a69a;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #8BC34A;
+        }
+
+        #garbage-chart {
+            width: 400px;
+            height: 400px;
+            margin: 20px auto;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html">  <img src="logo.png" alt="WasteWise Logo" class="logo">
+            </a>
+            <h1>WasteWise</h1>
+            <h1>Community Waste Management Tracker</h1>
+            <p><center>Your community’s one-stop solution for tracking waste collection, recycling, and more.</center></p>
+            <button id="explore-button">Explore Services</button>
+        </div>
+    </header>
+
+    <nav class="navv">
+        <ul>
+            <li><a href="index2.html">Waste Collection Schedule</a></li>
+            <li><a href="#stats">Recycling Statistics</a></li>
+            <li><a href="index1.html">Request Pickup</a></li>
+            <li><a href="index3.html">Waste Awareness</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="trivia">
+            <h2>Trivia</h2>
+            <p>Check how much your community is recycling:</p>
+
+            <section id="monthly-garbage-collection">
+                <h2>Monthly Garbage Collection</h2>
+                <div id="stats-display">
+                    <p>Recycled: 70%</p>
+                    <p>Non-recycled: 30%</p>
+                    <p>water treatment: 2 tonnes</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <main>
+        <section id="stats">
+            <h2>Recycling Statistics</h2>
+            <p>Check how much your community is recycling:</p>
+
+            <section id="monthly-garbage-collection">
+                <h2>Monthly Garbage Collection</h2>
+                <canvas id="garbage-chart"></canvas>
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+                <div id="stats-display">
+                    <p>Recycled: 70%</p>
+                    <p>Non-recycled: 30%</p>
+                </div>
+            </section>
+        </section>
+        
+    </main>
+    <section id="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>What is waste segregation?</h3>
+                    <button class="toggle-btn">+</button>
+                </div>
+                <div class="faq-answer">
+                    <p>Waste segregation is the process of separating different types of waste at the source. This helps in effective recycling, reduces landfill waste, and makes waste management more efficient.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>How can I reduce my household waste?</h3>
+                    <button class="toggle-btn">+</button>
+                </div>
+                <div class="faq-answer">
+                    <p>You can reduce household waste by:
+                        <ul>
+                            <li>Composting organic waste</li>
+                            <li>Buying products with minimal packaging</li>
+                            <li>Reusing and recycling items</li>
+                            <li>Avoiding single-use plastics</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>What is the difference between dry and wet waste?</h3>
+                    <button class="toggle-btn">+</button>
+                </div>
+                <div class="faq-answer">
+                    <p>Dry waste includes recyclable materials like paper, plastic, glass, and metal. Wet waste consists of organic materials like food scraps, kitchen waste, and garden waste that can be composted.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>How often should I schedule waste pickup?</h3>
+                    <button class="toggle-btn">+</button>
+                </div>
+                <div class="faq-answer">
+                    <p>Waste pickup frequency depends on your local municipality guidelines. Typically, dry waste can be collected weekly, while wet waste should be disposed of more frequently to prevent odor and pest issues.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>What items should not be thrown in regular trash?</h3>
+                    <button class="toggle-btn">+</button>
+                </div>
+                <div class="faq-answer">
+                    <p>Hazardous items like:
+                        <ul>
+                            <li>Electronic waste</li>
+                            <li>Batteries</li>
+                            <li>Chemical products</li>
+                            <li>Medical waste</li>
+                        </ul>
+                        Should be disposed of through special collection programs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Add this section at the end of the HTML file -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>WasteWise is a community-driven initiative to promote sustainable waste management practices.</p>
+                <p>Our mission is to educate, engage, and empower individuals to take action towards reducing waste and promoting recycling.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index2.html">Waste Collection Schedule</a></li>
+                    <li><a href="#stats">Recycling Statistics</a></li>
+                    <li><a href="index1.html">Request Pickup</a></li>
+                    <li><a href="index3.html">Waste Managment Awareness</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Phone: 123-456-7890</p>
+                <p>Email: <a href="mailto:info@wastewise.com">info@wastewise.com</a></p>
+                <p>Address: 123 Main St, Anytown,INDIA</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2024 WasteWise. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Community Waste Management</title>
+    <link rel="stylesheet" href="./style2.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.1/index.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Smart Community Waste Management</h1>
+            <p>Find waste collection schedules and more for a cleaner, smarter community.</p>
+        </header>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <label for="address">Enter Your Address:</label>
+            <input type="text" id="address" placeholder="e.g., 123 Main St" />
+            <button id="filter-button">Find Schedule</button>
+        </div>
+
+        <!-- Calendar Section -->
+        <div class="calendar-section">
+            <h2>Collection Calendar</h2>
+            <div id="calendar"></div>
+        </div>
+
+        <!-- Collection Table Section -->
+        <div class="collection-table">
+            <h2>Upcoming Collection Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Waste Type</th>
+                        <th>Collection Day</th>
+                        <th>Time</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody id="collection-data">
+                    <!-- Collection data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Smart Community Waste Management. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.1/index.min.js"></script>
+    <script src="./script2.js"></script>
+</body>
+</html>

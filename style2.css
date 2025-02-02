@@ -1,0 +1,153 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #26a69a, #004d40);
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-out;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Filter Section Styling */
+.filter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.filter-section label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+.filter-section input[type="text"] {
+    padding: 10px;
+    border: 2px solid #26a69a;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 250px;
+    transition: border-color 0.3s;
+}
+
+.filter-section input[type="text"]:focus {
+    border-color: #004d40;
+}
+
+.filter-section button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.filter-section button:hover {
+    background-color: #004d40;
+}
+
+/* Calendar Section Styling */
+.calendar-section {
+    margin: 20px 0;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-section h2 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+/* Collection Table Styling */
+.collection-table {
+    margin-top: 20px;
+}
+
+.collection-table h2 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.collection-table table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.collection-table th, .collection-table td {
+    padding: 12px;
+    text-align: center;
+    color: #333;
+}
+
+.collection-table th {
+    background-color: #26a69a;
+    color: #fff;
+}
+
+.collection-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004d40;
+    color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Community Waste Management System</title>
+    <link rel="stylesheet" href="./new.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <h1>Smart Community Waste Management System:Awareness</h1>
+      <p>Explore different types of waste and learn about their management.</p>
+    </header>
+
+    <!-- Card Section -->
+    <section class="waste-container">
+      <div class="waste-card" onclick="toggleReadMore('medical')">
+        <h2>Medical Waste</h2>
+        <p>Materials from healthcare activities...</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+      <div class="waste-card" onclick="toggleReadMore('e-waste')">
+        <h2>E-Waste</h2>
+        <p>Discarded electronic devices...</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+      <div class="waste-card" onclick="toggleReadMore('plastic')">
+        <h2>Plastic Waste</h2>
+        <p>Non-biodegradable materials...</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+      <div class="waste-card" onclick="toggleReadMore('biodegradable')">
+        <h2>Biodegradable Waste</h2>
+        <p>Organic materials that decompose...</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+      <div class="waste-card" onclick="toggleReadMore('industrial')">
+        <h2>Industrial Waste</h2>
+        <p>Byproducts of manufacturing processes...</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </section>
+
+    <!-- Modal Section for Details -->
+    <section class="modal" id="details-section">
+      <div id="medical" class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Medical Waste</h2>
+        <p>
+          Medical waste, a byproduct of healthcare activities, poses significant
+          environmental and health risks if not managed properly. It includes a
+          variety of items like sharps, pharmaceutical waste, and contaminated
+          materials. To mitigate these risks and promote sustainability, several
+          strategies can be implemented. These include proper waste segregation
+          and disposal, minimizing the use of single-use plastics, adopting
+          reusable instruments, promoting waste reduction at the source, and
+          implementing effective recycling programs
+        </p>
+        <img src="./medical.jpg" alt="Medical Waste Image" />
+      </div>
+      <div id="e-waste" class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>E-Waste</h2>
+        <p>Discarded electronic devices, such as phones and computers...</p>
+        <img src="./ewaste.jpg" alt="E-Waste Image" />
+      </div>
+      <div id="plastic" class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Plastic Waste</h2>
+        <p>Plastic waste is non-biodegradable and harms the environment...</p>
+        <img src="./plastic2.jpeg.jpg" alt="Plastic Waste Image" />
+      </div>
+      <div id="biodegradable" class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Biodegradable Waste</h2>
+        <p>Organic materials like food scraps and yard waste...</p>
+        <img src="./bio1.jpeg.jpg" alt="Biodegradable Waste Image" />
+      </div>
+      <div id="industrial" class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Industrial Waste</h2>
+        <p>Industrial waste is generated from manufacturing processes...</p>
+        <img
+          src="https://recykal.com/wp-content/uploads/2023/08/Industrial-Waste.png"
+          alt="Industrial Waste Image"
+        />
+      </div>
+    </section>
+
+    <script src="./jss.js"></script>
+  </body>
+</html>
